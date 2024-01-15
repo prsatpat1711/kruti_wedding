@@ -8,7 +8,8 @@ import EventDetails from './pages/EventDetails/EventDetails';
 function App() {
 
   return (
-    <>
+    <div>
+      Welcome to Kruti's Wedding
       <BrowserRouter>
         <Routes>
           <Route path="" element={<Home />} />
@@ -16,7 +17,7 @@ function App() {
           <Route path="/event-details" element={<EventDetails />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
