@@ -9,15 +9,15 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/kruti_wedding">
         <Routes>
-          <Route path='' element={<Home/>}/>
-          <Route path='/venue-details' element={<VenueDetails/>}/>
-          <Route path='/event-details' element={<EventDetails/>}/>          
+          <Route path="" element={<Home />} />
+          <Route path="/venue-details" element={<VenueDetails />} />
+          <Route path="/event-details" element={<EventDetails />} />
         </Routes>
       </BrowserRouter>
     </>
-  )
+  );
 }
 
 export default App
