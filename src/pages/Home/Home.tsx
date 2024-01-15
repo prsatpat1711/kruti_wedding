@@ -10,7 +10,7 @@ interface EventDetails {
 }
 
 export default function Home() {
-  const [eventDetails, setEventDetails] = useState<EventDetails[]>(Data["event-details"])
+  const eventDetails: EventDetails[] = Data["event-details"];
 
   return (
     <div className="d-flex flex-column text-center text-white bg-dark font ">
