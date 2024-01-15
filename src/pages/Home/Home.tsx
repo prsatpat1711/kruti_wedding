@@ -22,10 +22,6 @@ export default function Home() {
           id="carouselExampleIndicators"
           className="carousel slide carousel-fade me-5 ms-5"
           data-bs-ride="carousel"
-          style={{
-            width: "800px",
-            height: "600px",
-          }}
         >
           <div className="carousel-indicators ">
             <button
@@ -52,34 +48,25 @@ export default function Home() {
           <div className="carousel-inner me-5">
             <div className="carousel-item active">
               <img
-                src="https://scontent.fpnq7-2.fna.fbcdn.net/v/t39.30808-6/332512096_868461174256485_1847705593064542341_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=vfefIRpxgLAAX8DJ4_4&_nc_ht=scontent.fpnq7-2.fna&oh=00_AfARNFHSoVzbZqfNKer2odWsxeEFTi6pyAXjjb3_gZCcWg&oe=65AB0902"
-                className="d-block rounded"
-                style={{
-                  width: "800px",
-                  height: "600px",
-                }}
+                src="./slide1.jpg"
+                className="d-block rounded img-fluid"
+                
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://scontent.fpnq7-6.fna.fbcdn.net/v/t39.30808-6/317744522_5997257760314028_1403849719155393737_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=WgB3MXxX4c8AX-_R2gc&_nc_ht=scontent.fpnq7-6.fna&oh=00_AfD9gAEqeeaVX90jPT9k9T0NQ9Bs46C9EARQavdm4rbc8g&oe=65AA2614"
-                className="d-block rounded"
-                style={{
-                  width: "800px",
-                  height: "600px",
-                }}
+                src="https://scontent.fpnq7-4.fna.fbcdn.net/v/t31.18172-8/18423089_1465211373529105_348058495534636518_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7a1959&_nc_ohc=a-t75a2-lv8AX9UGKGM&_nc_ht=scontent.fpnq7-4.fna&oh=00_AfBVmfijRxFvDkQFtWLEQC1Ac8CT2LaBlCsN0xmnH8xypQ&oe=65CCD342"
+                className="d-block rounded img-fluid"
+                
                 alt="..."
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://scontent.fpnq7-4.fna.fbcdn.net/v/t39.30808-6/311109341_5847996638573475_3113737433290807703_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=ywpj1L_k8zoAX_XAipP&_nc_ht=scontent.fpnq7-4.fna&oh=00_AfAaOUGbkeq-7arq7-OOBIy3lbVNbLZoHs6Kg1RZXbWg2w&oe=65A9908D"
-                className="d-block rounded"
-                style={{
-                  width: "800px",
-                  height: "600px",
-                }}
+                className="d-block rounded img-fluid"
+                
                 alt="..."
               />
             </div>
