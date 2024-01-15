@@ -1,4 +1,17 @@
+import { useState } from "react";
+import {Data} from "../../Data";
+
+interface EventDetails {
+  id: number;
+  title: string;
+  date: string;
+  time: string;
+  color: string;
+}
+
 export default function Home() {
+  const [eventDetails, setEventDetails] = useState<EventDetails[]>(Data["event-details"])
+
   return (
     <div className="d-flex flex-column text-center text-white bg-dark font ">
       <div>
@@ -102,9 +115,9 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <h4 className="display 4 pt-5">Look at the upcoming events:-</h4>
+        <h4 className="display 4 pt-5">Look at the events:-</h4>
       </div>
-      <table className="table table-dark table-responsive">
+      <table className="table table-dark table-responsive table-striped">
         <thead>
             <tr>
                 <th scope="col">
@@ -119,17 +132,20 @@ export default function Home() {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope='row'>
-                    data.date
-                </th>
-                <th scope='row'>
-                    data.event
-                </th>
-                <th scope='row'>
-                    data.time
-                </th>
-            </tr>
+          {eventDetails.map((res) => (
+            <tr className={res.color} key={res.id}>
+              <td scope='row'>
+                  {res.date}
+              </td>
+              <td scope='row'>
+                  {res.title}
+              </td>
+              <td scope='row'>
+                  {res.time}
+              </td>
+          </tr>
+          ))}
+            
         </tbody>
       </table>
     </div>
