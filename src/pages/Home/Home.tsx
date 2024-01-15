@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {Data} from "../../Data";
 
 interface EventDetails {
@@ -10,12 +11,25 @@ interface EventDetails {
 
 export default function Home() {
   const eventDetails: EventDetails[] = Data["event-details"];
+  const [blink, setBlink] = useState<number>(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if(blink === 1){
+        setBlink(0)
+      }else{
+        setBlink(1)
+      }
+    }, 700);
+    return () => clearInterval(interval);
+  }, [blink])
 
   return (
-    <div className="d-flex flex-column text-center text-white bg-dark font ">
+    <div className="d-flex flex-column text-center text-white bg-dark ">
       <div>
-        <h1 className="pt-2 pb-2">Welcome to Kruti's wedding!</h1>
-        <h3 className="pt-2 pb-2">Save the dates: 26th-28th January!</h3>
+        <h1 className="pt-2 pb-2 fs-1">Welcome to Kruti's wedding!</h1>
+        <h1 className="pt-2 pb-2" style={{
+          visibility: blink === 0 ? "hidden" : "inherit"
+        }}>Save the dates: 26th-28th January!</h1>
       </div>
       <div className="d-flex flex-row justify-content-between align-items-center">
         <div
@@ -101,9 +115,9 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <h4 className="display 4 pt-5">Look at the events:-</h4>
+        <h1 className="display 4 pt-5">Look at the events:-</h1>
       </div>
-      <table className="table table-dark table-responsive table-striped">
+      <table className="table table-dark table-responsive table-striped font table-hover">
         <thead>
             <tr>
                 <th scope="col">
