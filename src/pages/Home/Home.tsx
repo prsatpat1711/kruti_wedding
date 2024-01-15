@@ -120,6 +120,9 @@ export default function Home() {
         <thead>
             <tr>
                 <th scope="col">
+                    ID
+                </th>
+                <th scope="col">
                     Date
                 </th>
                 <th scope="col">
@@ -133,6 +136,9 @@ export default function Home() {
         <tbody>
           {eventDetails.map((res) => (
             <tr className={res.color} key={res.id}>
+              <td scope='row'>
+                  {res.id}
+              </td>
               <td scope='row'>
                   {res.date}
               </td>
