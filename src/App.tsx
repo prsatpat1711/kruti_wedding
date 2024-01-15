@@ -12,7 +12,7 @@ function App() {
       Welcome to Kruti's Wedding
       <BrowserRouter basename="/kruti_wedding.github.io">
         <Routes>
-          <Route path="" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/venue-details" element={<VenueDetails />} />
           <Route path="/event-details" element={<EventDetails />} />
         </Routes>
