@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       Welcome to Kruti's Wedding
-      <BrowserRouter>
+      <BrowserRouter basename="/kruti_wedding.github.io">
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="/venue-details" element={<VenueDetails />} />
